@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- link the main css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- link the main js file -->
+    <script type="module" src="js/app.js" defer></script>
+</head>
+<body>
+        <!-- ai2html -->
+        <section class="ai2html">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                <!-- This is the line that matters for import -->
+                <%- include('./ai2html-output/ai2html-test.ejs'); %>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        
+
+        <!-- scrolly -->
+        <section id="doge-scrolly">
+
+        <!-- define the scroll sections -->
+        <% const blocks=
+            [
+            { 
+                "filename" : "cause1" , 
+                "anno": "<div class='h5 fw-bold'>  </div> CO2 emmissions have reduced from 36.6 billion in 2019 to 34.1 billion in 2020 due to Covid 19 forced confinement." 
+            }, 
+            { 
+                "filename" : "cause2" , 
+                "anno": "<div class='h5 fw-bold'>  </div> The thermal expansion of water due to increase in temperatures, and glacier melting caused by global warming has led to an increase in sea level over the years." 
+            },
+            { 
+                "filename" : "cause3" , 
+                "anno": "<div class='h5 fw-bold'>  </div>  Since 1993 average sea level has risen at a rate of 0.12 to 0.14 inches per year, roughly twice as fast as the long term trend." 
+            }
+            ] 
+        %>
+        <!-- every { filename, anno } object makes a new section -->
+
+        <!-- include the component -->
+        <%- include('./scrolly/scrolly.ejs', {id: "doge-scrolly" , blocks: blocks }); %>
+        
+        </section>
+
+         <!-- ai2html -->
+         <section class="ai2html">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                <!-- This is the line that matters for import -->
+                <%- include('./ai2html-output/ai2html-test3.ejs'); %>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="dog-scrolly">
+
+            <!-- define the scroll sections -->
+            <% const blocks1=
+                [
+                { 
+                    "filename" : "cause5" , 
+                    "anno": "<div class='h5 fw-bold'>  </div> Rising Sea levels can cause extreme weather events including storms, floods, hurricanes and unpredictable precipitation." 
+                }
+                ] 
+            %>
+            <!-- every { filename, anno } object makes a new section -->
+    
+            <!-- include the component -->
+            <%- include('./scrolly/scrolly.ejs', {id: "dog-scrolly" , blocks: blocks1 }); %>
+            
+            </section>
+
+        <!-- ai2html -->
+        <section class="ai2html">
+            <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                <!-- This is the line that matters for import -->
+                <%- include('./ai2html-output/ai2html-test2.ejs'); %>
+                </div>
+            </div>
+            </div>
+        </section>
+</body>
+</html>
